@@ -1,5 +1,6 @@
 import { signIn } from "../Auth/Auth";
 import { LoginButton } from "./Components/LoginButton/LoginButton";
+import { AudioLines } from "lucide-react";
 
 export function LoginLayout() {
   const handleSignIn = async () => {
@@ -8,27 +9,14 @@ export function LoginLayout() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-black flex items-center justify-center p-4">
-      <div className="w-full max-w-md rounded-lg border border-gray-700 bg-black p-8">
+    <div className="min-h-screen w-full bg-[#22262b] flex items-center justify-center p-4">
+      <div className="w-full max-w-md rounded-lg border border-gray-700 bg-[#22262b] p-8">
         {/* 커뮤니티 헤더 */}
-        <div className="flex items-center justify-center mb-8">
-          <svg
-            className="w-8 h-8 text-white mr-2"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-            />
-          </svg>
-        </div>
-        <h2 className="text-2xl font-semibold text-white mb-8 text-center">
-          어서와 여기는 처음이지?
-        </h2>
+    
+         <div className="flex flex-col items-center justify-center gap-2 mb-8">
+        <AudioLines className="h-[50px] w-[50px] text-gray-100" />
+        <span className="text-white font-bold text-2xl">POPLINGO</span>
+      </div>
 
         {/* 환영 메시지 */}
 
