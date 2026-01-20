@@ -1,18 +1,11 @@
-import { signOut } from "../Auth/Auth";
 import { Session } from "next-auth";
+import { ProfileHeader } from "./Components/ProfileHeader/ProfileHeader";
 
 export function HomeLayout({ session }: { session: Session }) {
   return (
-    <div>
-      <img src={session.user?.image ?? ""} alt="Profile" />
-      <form
-        action={async () => {
-          "use server";
-          await signOut();
-        }}
-      >
-        <button type="submit">로그아웃</button>
-      </form>
+    <div className="min-h-screen w-full bg-[#22262b] flex flex-col ">
+      {/* header */}
+      <ProfileHeader session={session} />
     </div>
   );
 }
